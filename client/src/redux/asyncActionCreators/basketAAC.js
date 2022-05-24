@@ -1,7 +1,7 @@
 import { initBasketAC } from "../actionCreators/basketAC";
 export const fetchInitBasket = (payload) => {
   return (dispatch) => {
-    fetch("/basket", {
+    fetch("/api/basket", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -14,7 +14,7 @@ export const fetchInitBasket = (payload) => {
 
 export const fetchDelItems = (payload) => {
   return (dispatch) => {
-    fetch("/basket/del", {
+    fetch("/api/basket/del", {
       credentials: "include",
       method: "DELETE",
       headers: { "Content-Type": "Application/json" },
@@ -25,7 +25,7 @@ export const fetchDelItems = (payload) => {
 
 export const fetchBuyItems = (payload) => {
   return () => {
-    fetch("/basket/buy", {
+    fetch("/api/basket/buy", {
       credentials: "include",
       method: "POST",
       headers: { "Content-Type": "Application/json" },
