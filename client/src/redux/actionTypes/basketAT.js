@@ -1,0 +1,2 @@
+export const INIT_BASKET = "INIT_BASKET";
+export const UPDATE_BASKET = 'UPDATE_BASKET'
