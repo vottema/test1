@@ -16,7 +16,7 @@ function Products(props) {
     }, 120000);
   }, [ratesUpdate])
   const { rates } = useSelector(state => state.ratesApiReducer)
-
+ 
   useEffect(() => {
     dispatch(fetchInitBasket())
     dispatch(fetchInitProducts())
