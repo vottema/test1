@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Basket } = require("../db/models");
 const { Product } = require("../db/models");
 
-router.route("/api").get((req, res) => {
+router.route("/").get((req, res) => {
   Basket.findAll({ raw: true })
     .then((allItems) => {
       const idItems = allItems.map((item) => item.id);
@@ -16,12 +16,12 @@ router.route("/api").get((req, res) => {
     .catch((error) => console.log(error));
 });
 
-router.route("/api/del").delete((req, res) => {
+router.route("/del").delete((req, res) => {
   const { id } = req.body;
   Basket.destroy({ where: { id } });
 });
 
-router.route("/api/buy").post((req, res) => {
+router.route("/buy").post((req, res) => {
   const { id } = req.body;
   Product.findAll({ where: { id }, raw: true })
   .then((data) => {
