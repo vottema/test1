@@ -10,7 +10,7 @@ function Products(props) {
 
   const [ratesUpdate, setRatesUpdate] = useState(0)
   useEffect(() => {
-    // dispatch(fetchCheckRates())
+    dispatch(fetchCheckRates())
     setTimeout(() => {
       setRatesUpdate((prev) => prev + 1)
     }, 120000);
