@@ -2,7 +2,7 @@ import { updateBasketAC } from "../actionCreators/basketAC";
 import { initProductAC } from "../actionCreators/productsAC";
 export const fetchInitProducts = (payload) => {
   return (dispatch) => {
-    fetch("/", {
+    fetch("/product", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -16,7 +16,7 @@ export const fetchInitProducts = (payload) => {
 
 export const fetchAddItem = (payload) => {
   return (dispatch) => {
-    fetch("/", {
+    fetch("/product", {
       credentials: "include",
       method: "POST",
       headers: { "Content-Type": "Application/json" },
