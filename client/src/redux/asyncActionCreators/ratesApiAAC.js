@@ -1,7 +1,7 @@
 import { checkRatesAC } from "../actionCreators/ratesApiAC";
 
 const myHeaders = new Headers();
-myHeaders.append("apikey", "ETEvxDl1sfKZQ4cnzf5LRsaIWGu7mOsM");
+myHeaders.append("apikey", "Uw9pFCyYqRyCF7UKUNQn2FRZf1pxPX9T");
 
 const requestOptions = {
   method: "GET",
